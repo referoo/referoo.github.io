@@ -1,0 +1,22 @@
+---
+---
+
+@import "{{ site.theme }}";
+@import "icomoon";
+
+body {
+    background-color: rgb(6, 103, 110);
+    color: #fff
+}
+
+.mainQuote {
+    font-size: 300%;
+    margin-bottom: 1em;
+}
+
+.icon-logo {
+    position:relative;
+    top: .1em;
+    font-size: 85%;
+}
+

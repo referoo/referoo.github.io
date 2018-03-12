@@ -1,7 +1,6 @@
 ---
 title: Referoo
-layout: default
+layout: front
 ---
 
 
-# Referoo
