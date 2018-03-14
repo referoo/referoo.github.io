@@ -1,32 +1,107 @@
 <!doctype html>
-<html lang="{{ site.lang | default: "en-US" }}">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+<html lang="{{ site.lang | default: " en-US " }}">
 
-{% seo %}
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1"> {% seo %}
 
-    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-    <meta name="viewport" content="width=device-width">
-    <!--[if lt IE 9]>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <meta name="viewport" content="width=device-width">
+  <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-  </head>
-  <body>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+</head>
+
+<body>
+  <div class="headerBanner">
     <div class="wrapper">
-      
+
       <div class="mainQuote">
-      Referoo&nbsp;
-      <span class="icon-logo">
-      </span>is the <i>free</i>&nbsp;and&nbsp;<i>open</i> platform revolutionizing scientific peer-reviewing.  
+        Referoo&nbsp;
+        <span class="icon-logo">
+        </span> is the
+        <i>free</i> and
+        <i>open</i> platform revolutionizing scientific peer&#8209;reviewing.
       </div>
 
-      {{ content }}
 
-      
+
+      {% for item in site.referoo_features %}
+
+      <div class="featureEntry">
+        <div class="featureLogo">
+        <div class="fas fa-{{ item.description }}">
+        </div>
+      </div>
+      <div class="featureInfo">
+          <div class="featureTitle">
+            {{ item.title }}
+          </div>
+          <div class="featureContent">
+            {{ item.content}}
+          </div>
+        </div>
+      </div>
+
+      {% endfor %}
+
     </div>
-    <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+  </div>
 
 
-  </body>
+  <div class="wrapper">
+    {{ content }}
+
+    <div class="blog">
+
+      {% for post in site.posts %}
+
+      <div class="postEntry">
+        <h1 class="post">
+          {{ post.title }}
+        </h1>
+        <h2 class="post">
+          By
+          <span class="icon-logo">
+          </span> on {{ post.date | date: '%B %d, %Y' }}
+        </h2>
+        <div class="postContent">
+          {{ post.content }}
+        </div>
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <div class="footerBanner">
+    <div class="wrapper">
+      <span class="icon-logo">
+      </span>
+      is funded by
+      <a href="http://www.vietsch-foundation.org">
+        <img src="{{ '/assets/img/vietsch.png' | relative_url }}" width="100px" />
+      </a>
+      and developed by teams at
+      <span class="group">
+        <a href="http://www.ulb.ac.be">
+          <img src="{{ '/assets/img/ulb.png' | relative_url }}" width="120px" />
+        </a>
+        <a href="http://www.fnrs.be">
+          <img src="{{ '/assets/img/fnrs.png' | relative_url }}" width="60px" />
+        </a>
+        <a href="http://www.synapsis-group.com">
+          <img src="{{ '/assets/img/synapsis.png' | relative_url }}" width="140px" />
+        </a>
+      </span>
+    </div>
+  </div>
+
+  <script src="{{ '/assets/js/scale.fix.js' | relative_url }}"></script>
+
+
+</body>
+
 </html>

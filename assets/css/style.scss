@@ -4,14 +4,44 @@
 @import "{{ site.theme }}";
 @import "icomoon";
 
+
 body {
-    background-color: rgb(6, 103, 110);
-    color: #fff
+    padding: 0;
+    margin: 0;
+}
+
+.wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .mainQuote {
+    padding-top: 2em;
+    padding-bottom: 2em;
     font-size: 300%;
-    margin-bottom: 1em;
+}
+
+.mainQuote i {
+    border-bottom: 1px dotted;
+}
+
+.headerBanner {
+    background-color: rgb(6, 80, 110);
+    color: #fff;
+  width: auto;
+  -webkit-font-smoothing:subpixel-antialiased;
+  padding-bottom: 1em;
+}
+
+.footerBanner {
+    border-top: 1px dotted;
+    text-align: center;
+    -webkit-font-smoothing:subpixel-antialiased;
+}
+
+.footerBanner img {
+    vertical-align: middle;
+    margin: 10px;
 }
 
 .icon-logo {
@@ -20,3 +50,82 @@ body {
     font-size: 85%;
 }
 
+.group {
+    display: inline-block;
+}
+
+h1.post {
+    color: rgb(6, 80, 110);
+    font-size:200%;
+    font-style: normal;
+    font-weight: 200;
+}
+
+h2.post {
+    color: rgb(6, 80, 110);
+    font-size:90%;
+    font-style: normal;
+    font-weight: 100;
+    -webkit-font-smoothing:subpixel-antialiased;
+}
+
+.postContent {
+    color: #000;
+}
+
+.featureEntry {
+    margin-top: .5em;
+    margin-bottom: 2em;
+    width: auto;
+    overflow: auto;
+    position:relative;
+    padding-left:10px;
+    border-left: 1px dotted #fff;
+   
+}
+
+.featureLogo {
+    width: 40px;
+    height: inherit;
+    line-height: 28px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    float: left;
+}
+
+.featureInfo {
+    float: right;
+    width: calc(100% - 50px);
+}
+
+.featureTitle {
+    color: #fff;
+    font-weight: bold;
+    font-size: 130%;
+}
+
+.featureContent {
+    color: #fff;
+}
+
+.featureContent p {
+    display: inline;
+}
+
+.postEntry {
+    margin-top: .5em;
+    margin-bottom: 2em;
+    padding-left:10px;
+    border-left: 1px dotted rgb(6, 80, 110);
+}
+
+.postContent a {
+    color: #000;
+    border-bottom: 1px dotted;
+}
+
+.postContent img {
+    float:right;
+    width: 200px;
+}

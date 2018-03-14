@@ -3,3 +3,6 @@ description: Open and free refereeing
 show_downloads: false
 google_analytics:
 theme: jekyll-theme-minimal
+collections:
+ referoo_features:
+  output: true
