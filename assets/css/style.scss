@@ -29,9 +29,10 @@ body {
 .headerBanner {
     background-color: $brandcolor;
     color: #fff;
-  width: auto;
-  -webkit-font-smoothing:subpixel-antialiased;
-  padding-bottom: 1em;
+    width: auto;
+    -webkit-font-smoothing:subpixel-antialiased;
+    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .footerBanner {
