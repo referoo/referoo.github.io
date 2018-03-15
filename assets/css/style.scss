@@ -4,6 +4,7 @@
 @import "{{ site.theme }}";
 @import "icomoon";
 
+$brandcolor:rgb(6, 80, 110);
 
 body {
     padding: 0;
@@ -26,7 +27,7 @@ body {
 }
 
 .headerBanner {
-    background-color: rgb(6, 80, 110);
+    background-color: $brandcolor;
     color: #fff;
   width: auto;
   -webkit-font-smoothing:subpixel-antialiased;
@@ -55,14 +56,14 @@ body {
 }
 
 h1.post {
-    color: rgb(6, 80, 110);
+    color: $brandcolor;
     font-size:200%;
     font-style: normal;
     font-weight: 200;
 }
 
 h2.post {
-    color: rgb(6, 80, 110);
+    color: $brandcolor;
     font-size:90%;
     font-style: normal;
     font-weight: 100;
@@ -80,8 +81,7 @@ h2.post {
     overflow: auto;
     position:relative;
     padding-left:10px;
-    border-left: 1px dotted #fff;
-   
+    border-left: 1px dotted #fff;   
 }
 
 .featureLogo {
@@ -117,7 +117,7 @@ h2.post {
     margin-top: .5em;
     margin-bottom: 2em;
     padding-left:10px;
-    border-left: 1px dotted rgb(6, 80, 110);
+    border-left: 1px dotted $brandcolor;
 }
 
 .postContent a {
@@ -128,4 +128,18 @@ h2.post {
 .postContent img {
     float:right;
     width: 200px;
+}
+
+@media print, screen and (max-width: 960px) {
+    .mainQuote {
+        font-size: 250%;
+    }
+}
+
+@media print, screen and (max-width: 720px) {
+    .mainQuote {
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        font-size: 225%;
+    }
 }
